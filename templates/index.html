@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="30; URL=http://vpn.sm">
+    <title>sm.net</title>
+ </head>
+ <h1>sm.net - connected clients</h1>
+
+ <h3>Servers</h3>
+ <table border="1">
+     <thead>
+         <th>Client name</th>
+         <th>VPN IP</th>
+         <th>Real IP</th>
+         <th>Bytes sent</th>
+         <th>Bytes received</th>
+         <th>Connected since</th>
+     </thead>
+     <tbody>
+         {% for client in clients['servers'] %}
+         <tr>
+             <td style="vertical-align:middle;">{{client.name}}</td>
+             <td style="vertical-align:middle;">{{client.vpn_ip}}</td>
+             <td style="vertical-align:middle;">{{client.real_ip}}</td>
+             <td style="vertical-align:middle;">{{client.sent}}</td>
+             <td style="vertical-align:middle;">{{client.received}}</td>
+             <td style="vertical-align:middle;">{{client.since}}</td>
+         </tr>
+         {% endfor %}
+     </tbody>
+ </table>
+ <h3>DHCP clients</h3>
+ <table border="1">
+     <thead>
+         <th>Client name</th>
+         <th>VPN IP</th>
+         <th>Real IP</th>
+         <th>Bytes sent</th>
+         <th>Bytes received</th>
+         <th>Connected since</th>
+     </thead>
+     <tbody>
+         {% for client in clients['dhcp'] %}
+         <tr>
+             <td style="vertical-align:middle;">{{client.name}}</td>
+             <td style="vertical-align:middle;">{{client.vpn_ip}}</td>
+             <td style="vertical-align:middle;">{{client.real_ip}}</td>
+             <td style="vertical-align:middle;">{{client.sent}}</td>
+             <td style="vertical-align:middle;">{{client.received}}</td>
+             <td style="vertical-align:middle;">{{client.since}}</td>
+         </tr>
+         {% endfor %}
+     </tbody>
+ </table>
+</html>
