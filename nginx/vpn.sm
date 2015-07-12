@@ -4,7 +4,7 @@ upstream ovpn_board {
 }
 
 server {
-    server_name vpn.sm;
+    server_name vpn.sm info.sm;
 
     access_log off;
     error_log off;
