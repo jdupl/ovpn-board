@@ -27,6 +27,7 @@ class Reader():
 
 
     def parse_file(self):
+        # Bytes received are bytes sent from client
         CLIENT_LIST_DELIM = "Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since"
         ROUTING_TABLE_DELIM = "Virtual Address,Common Name,Real Address,Last Ref"
 
@@ -55,8 +56,8 @@ class Reader():
                 'name': client[0],
                 'real_ip': client[1].split(':')[0],
                 'vpn_ip': routing_table[k][0],
-                'received': client[2],
-                'sent': client[3],
+                'received': client[3],
+                'sent': client[2],
                 'since': client[4],
             })
 
