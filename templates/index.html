@@ -23,8 +23,8 @@
              <td style="vertical-align:middle;">{{client.name}}</td>
              <td style="vertical-align:middle;">{{client.vpn_ip}}</td>
              <td style="vertical-align:middle;">{{client.real_ip}}</td>
-             <td style="vertical-align:middle;">{{client.sent}}</td>
-             <td style="vertical-align:middle;">{{client.received}}</td>
+             <td style="vertical-align:middle;">{{client.sent | format_byte_amount}}</td>
+             <td style="vertical-align:middle;">{{client.received | format_byte_amount}}</td>
              <td style="vertical-align:middle;">{{client.since}}</td>
          </tr>
          {% endfor %}
@@ -46,8 +46,8 @@
              <td style="vertical-align:middle;">{{client.name}}</td>
              <td style="vertical-align:middle;">{{client.vpn_ip}}</td>
              <td style="vertical-align:middle;">{{client.real_ip}}</td>
-             <td style="vertical-align:middle;">{{client.sent}}</td>
-             <td style="vertical-align:middle;">{{client.received}}</td>
+             <td style="vertical-align:middle;">{{client.sent | format_byte_amount}}</td>
+             <td style="vertical-align:middle;">{{client.received | format_byte_amount}}</td>
              <td style="vertical-align:middle;">{{client.since}}</td>
          </tr>
          {% endfor %}
