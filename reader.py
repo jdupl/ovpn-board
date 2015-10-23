@@ -1,5 +1,6 @@
 import time
 
+
 class Reader():
 
     def __init__(self, filename='/etc/openvpn/openvpn-status.log'):
@@ -25,11 +26,12 @@ class Reader():
             else:
                 self.cached_clients['servers'].append(client)
 
-
     def parse_file(self):
         # Bytes received are bytes sent from client
-        CLIENT_LIST_DELIM = "Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since"
-        ROUTING_TABLE_DELIM = "Virtual Address,Common Name,Real Address,Last Ref"
+        CLIENT_LIST_DELIM = "\
+Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since"
+        ROUTING_TABLE_DELIM = "\
+Virtual Address,Common Name,Real Address,Last Ref"
 
         client_list = {}
         routing_table = {}

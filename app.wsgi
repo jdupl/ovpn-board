@@ -1,3 +1,3 @@
-from app import setup
+from ovpn-board import setup
 
 application = setup()
