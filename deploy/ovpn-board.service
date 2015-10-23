@@ -1,0 +1,14 @@
+; systemd config file
+[Service]
+Type=simple
+ExecStart=/usr/bin/uwsgi /home/ovpn-board/ovpn-board/deploy/ovpn-board.ini
+
+; uwsgi shouldn't crash, but you never know
+Restart=always
+RestartSec=60
+
+User=ovpn-board
+Group=ovpn-board
+
+[Install]
+WantedBy=default.target
